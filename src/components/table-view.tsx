@@ -59,8 +59,8 @@ const TableView = () => {
               <td><img alt={product.name} className="product-logo" src={product.logo} /></td>
               <td>{product.name}</td>
               <td>{product.description}</td>
-              <td>{product.date_release.toString()}</td>
-              <td>Second Date</td>
+              <td>{new Date(product.date_release).toLocaleDateString('en-US')}</td>
+              <td>{new Date(product.date_revision).toLocaleDateString('en-US')}</td>
               <td><MoreVertical size={18} /></td>
             </tr>
           ))}

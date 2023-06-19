@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
   color: #1a1a1a;
   background-color: #f5f6f9;
 
@@ -18,10 +18,8 @@ body {
   margin: 0;
 }
 
-#root {
-  max-width: 1280px;
+#root {;
   margin: 0 auto;
-  text-align: center;
 }
 
 .header {
@@ -55,7 +53,8 @@ body {
 }
 
 .table-view{
-  margin-top: 50px;
+  max-width: 1280px;
+  margin: 50px auto;
   padding: 20px;
 }
 .table-view-header, .table-view-footer{
@@ -103,13 +102,15 @@ body {
   margin-bottom: 20px;
 }
 .table-view .table-container{
+  overflow-x: auto;
   background: #FFFFFF;
   padding: 20px;
 }
 .table-view table thead{
   background-color: #f3f3f3;
   color: #252525;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  text-align: left;
 }
 .table-view table th span{
   display: flex;
@@ -118,7 +119,7 @@ body {
 
 }
 .table-view table thead tr th {
-  padding: 20px;
+  padding: 20px 10px;
 }
 .product-logo{
   width: 45px;
