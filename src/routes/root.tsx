@@ -1,12 +1,14 @@
 import Header from '../components/header'
-import TableView from '../components/table-view'
+import { Outlet } from 'react-router-dom'
 
 function Products() {
 
   return (
     <>
       <Header />
-      <TableView />
+      <div className="container">
+        <Outlet />
+      </div>
     </>
   )
 }
