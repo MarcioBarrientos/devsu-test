@@ -3,7 +3,7 @@ import TablePagination from '../components/table-pagination'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { Product } from '../lib/types'
-import { fetchProductos } from '../lib/data'
+import { fetchProducts } from '../lib/api.ts'
 import { Loader2Icon } from 'lucide-react'
 
 const Productos = () => {
@@ -14,7 +14,7 @@ const Productos = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    void fetchProductos().then((data) => {
+    void fetchProducts().then((data) => {
       setProducts(data)
       setFilteredProducts(data)
       setLoading(false)
@@ -42,7 +42,7 @@ const Productos = () => {
 
         {!!filteredProducts.length && (
           <>
-            <TableProducts products={filteredProducts}/>
+            <TableProducts products={filteredProducts} setProducts={setFilteredProducts}/>
             <TablePagination count={filteredProducts.length}/>
           </>
         )}

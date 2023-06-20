@@ -3,6 +3,6 @@ export type Product = {
   name: string
   logo: string
   description: string
-  date_release: Date
-  date_revision: Date
+  date_release: string
+  date_revision: string
 }

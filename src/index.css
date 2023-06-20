@@ -87,7 +87,7 @@ body {
     outline: none;
 }
 
-.table-header .add-button {
+.add-button {
     background-color: #f4dc5b;
     border-radius: 8px;
     border: 1px solid transparent;
@@ -223,4 +223,53 @@ table tbody tr td {
         transform:rotate(360deg);
     }
 }
+.form-container{
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
 
+.form-group label{
+    font-size: 0.9rem;
+    color: #595959;
+}
+.form-group input{
+    width: 100%;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #1a2336;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.form .form-fields{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 20px;
+    grid-auto-rows: minmax(0px, 60px);
+}
+
+.form-header{
+    border-bottom: 1px solid #4d4d4d;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.form-header h1{
+    font-size: 1.6rem;
+    color: #1a2336;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    margin:10px;
+}
+.form-actions{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
