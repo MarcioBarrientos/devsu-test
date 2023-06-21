@@ -2,7 +2,7 @@ import {InfoIcon} from 'lucide-react'
 import {Product} from '../lib/types'
 import React from 'react'
 import ContextButton from './context-button'
-import * as dayjs from "dayjs";
+import dayjs from "dayjs/esm/index.js";
 
 const addImageFallback = (event: React.SyntheticEvent<HTMLImageElement>) => {
     event.currentTarget.src = 'https://via.placeholder.com/45x45'

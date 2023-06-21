@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider, } from 'react-router-dom'
 import './index.css'
 import Root from './routes/root'
 import ErrorPage from './error-page'
-import NuevoProducto from './routes/nuevo-producto'
+import NewProduct from './routes/new-product'
 import ListProducts from './routes/list-products'
-import EditProduct from "./routes/edit-product.tsx";
+import EditProduct from "./routes/edit-product";
 
 const router = createBrowserRouter([
   {
@@ -14,13 +14,14 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
+      { index: true, element: <ListProducts /> },
       {
         path: "/",
         element: <ListProducts />,
       },
       {
         path: "/nuevo-producto",
-        element: <NuevoProducto />,
+        element: <NewProduct />,
       },
       {
         path: "/editar-producto/:id",

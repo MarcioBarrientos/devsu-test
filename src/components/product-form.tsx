@@ -3,7 +3,7 @@ import {SubmitHandler, useForm} from "react-hook-form";
 import styles from './product-form.module.css'
 import { z } from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs/esm/index.js";
 
 type ProductFormProps = {
     product?: Product;

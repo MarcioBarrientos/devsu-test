@@ -5,7 +5,7 @@ import ProductForm from "../components/product-form";
 import toast from "react-hot-toast";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs/esm/index.js";
 
 const EditProduct = () => {
     const navigate = useNavigate()

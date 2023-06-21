@@ -2,7 +2,7 @@ import {Product} from '../lib/types'
 import {createProduct, verifyProductId} from '../lib/api'
 import {SubmitHandler} from "react-hook-form";
 import ProductForm from "../components/product-form";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs/esm/index.js";
 import toast from "react-hot-toast";
 import {useNavigate} from "react-router-dom";
 
@@ -14,7 +14,7 @@ const initialState = {
     date_release: dayjs().format('YYYY-MM-DD'),
     date_revision: dayjs().add(1, 'year').format('YYYY-MM-DD')
 }
-const NuevoProducto = () => {
+const NewProduct = () => {
     const navigate = useNavigate()
     const submitHandler: SubmitHandler<Product> = async (data) => {
         try {
@@ -42,4 +42,4 @@ const NuevoProducto = () => {
         </div>
     )
 }
-export default NuevoProducto
+export default NewProduct
