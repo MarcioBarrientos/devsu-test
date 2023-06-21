@@ -45,8 +45,8 @@ const ProductForm = ({product, onSubmit}: ProductFormProps) => {
     })
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} noValidate className="form" autoComplete="off">
-            <div className="form-fields">
+        <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
+            <div className={styles.formFields}>
                 <div className={styles.inputField}>
                     <label>ID</label>
                     <input readOnly={!!product?.id} defaultValue={product?.id} {...register("id")} />

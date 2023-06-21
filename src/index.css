@@ -22,41 +22,6 @@ body {
     margin: 0 auto;
 }
 
-.header {
-    background-color: #FFFFFF;
-    padding: 10px 0;
-
-}
-.header-link{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.header .logo-square {
-    position: relative;
-    background: #f2df5f;
-    width: 35px;
-    height: 35px;
-}
-
-.header .logo-square > * {
-    rotate: -45deg;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.header .logo-text {
-    text-align: left;
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 1rem;
-    color: #1a2336;
-}
-
 .container {
     max-width: 1280px;
     margin: 50px auto;
@@ -168,52 +133,11 @@ table tbody tr td {
     color: #252525;
     margin-left: 20px;
 }
-.context-menu-container{
-    position: relative;
-}
-.context-menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 2rem;
-    z-index: 100;
-
-}
-.context-menu > div {
-    background-color: #FFFFFF;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e6e6e6;
-}
-.context-menu__item{
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    background-color: #FFFFFF;
-    color: #595959;
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    text-align: right;
-}
-.context-menu__item:hover{
-    background-color: #f5f6f9;
-}
 
 .loading-container, .empty-container {
     padding: 20px;
     text-align: center;
     color: #707070;
-}
-
-.action-button {
-    background-color: transparent;
-    border: none;
-    padding: 5px;
-    color: #7e7e7e;
-}
-.action-button:hover {
-    cursor: pointer;
-    color: #232323;
 }
 
 .spin-icon {
@@ -234,18 +158,6 @@ table tbody tr td {
     max-width: 600px;
 }
 
-
-.form .form-fields{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px 20px;
-}
-@media (max-width: 600px) {
-    .form .form-fields{
-        grid-template-columns: 1fr;
-    }
-}
-
 .form-header{
     border-bottom: 1px solid #4d4d4d;
     margin-bottom: 20px;
@@ -259,4 +171,3 @@ table tbody tr td {
     text-align: center;
     margin:10px;
 }
-

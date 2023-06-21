@@ -1,0 +1,42 @@
+.contextMenuContainer{
+    position: relative;
+}
+
+.actionButton {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    color: #7e7e7e;
+}
+.actionButton:hover {
+    cursor: pointer;
+    color: #232323;
+}
+
+.contextMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 2rem;
+    z-index: 100;
+
+}
+.contextMenu > div {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e6e6e6;
+}
+.contextMenuItem{
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    background-color: #FFFFFF;
+    color: #595959;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: right;
+}
+.contextMenuItem:hover{
+    background-color: #f5f6f9;
+}

@@ -1,0 +1,34 @@
+.header {
+    background-color: #FFFFFF;
+    padding: 10px 0;
+
+}
+.headerLink{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logoSquare {
+    position: relative;
+    background: #f2df5f;
+    width: 35px;
+    height: 35px;
+}
+
+.logoSquare > * {
+    rotate: -45deg;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.logoText {
+    text-align: left;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1rem;
+    color: #1a2336;
+}

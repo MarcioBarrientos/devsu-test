@@ -4,6 +4,7 @@ import {deleteProduct} from '../lib/api'
 import ConfirmDialog from "./confirm-dialog";
 import toast from "react-hot-toast";
 import {useNavigate} from "react-router-dom";
+import styles from './context-button.module.css'
 
 const ContextButton = ({productId, onDelete}: {
     productId: string
@@ -18,16 +19,16 @@ const ContextButton = ({productId, onDelete}: {
     const navigate = useNavigate()
     const [openDialog, setOpenDialog] = useState(false)
     return (
-        <div className="context-menu-container">
-            <div className="action-button"
+        <div className={styles.contextMenuContainer}>
+            <div className={styles.actionButton}
                  onClick={() => setOpen(!open)}
                  onMouseLeave={() => setOpen(false)}>
                 <MoreVertical size={18}/>
                 {open && (
-                    <div className="context-menu">
+                    <div className={styles.contextMenu}>
                         <div>
-                            <button onClick={() => navigate(`/editar-producto/${productId}`)} className="context-menu__item">Editar</button>
-                            <button onClick={() => setOpenDialog(true)} className="context-menu__item">Eliminar</button>
+                            <button onClick={() => navigate(`/editar-producto/${productId}`)} className={styles.contextMenuItem}>Editar</button>
+                            <button onClick={() => setOpenDialog(true)} className={styles.contextMenuItem}>Eliminar</button>
                         </div>
                     </div>
                 )}

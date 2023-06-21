@@ -1,14 +1,15 @@
 import { ChevronRightIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import styles from './header.module.css'
 
 const Header = () => {
   return (
-    <header className="header">
-      <Link to='/' className="header-link">
-        <div className="logo-square">
+    <header className={styles.header}>
+      <Link to='/' className={styles.headerLink}>
+        <div className={styles.logoSquare}>
           <ChevronRightIcon strokeWidth={4} size={21} color="#1a2336" />
         </div>
-        <div className="logo-text">
+        <div className={styles.logoText}>
           BANCO <br/>
           PICHINCHA
         </div>
