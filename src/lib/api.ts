@@ -59,3 +59,16 @@ export const createProduct = async (product: Partial<Product>) => {
     return []
   }
 }
+
+export const verifyProductId = async (id: string) => {
+  try {
+    const response = await fetch(`${URL}/bp/products/verification?id=${id}`, {
+      headers: {
+        'authorId': AUTHOR_ID
+      }
+    })
+    return await response.json()
+  } catch (e) {
+    return []
+  }
+}

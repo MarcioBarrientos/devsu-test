@@ -5,8 +5,8 @@ import './index.css'
 import Root from './routes/root'
 import ErrorPage from './error-page'
 import NuevoProducto from './routes/nuevo-producto'
-import EditarProducto from './routes/editar-producto'
-import Productos from './routes/productos'
+import ListProducts from './routes/list-products'
+import EditProduct from "./routes/edit-product.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Productos />,
+        element: <ListProducts />,
       },
       {
         path: "/nuevo-producto",
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/editar-producto/:id",
-        element: <EditarProducto />,
+        element: <EditProduct />,
       },
     ]
   },

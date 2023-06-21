@@ -1,0 +1,50 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.5);
+}
+.dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 100;
+}
+.dialog h1{
+    font-size: 1.2rem;
+    color: #252525;
+    margin-bottom: 0;
+}
+.dialog p{
+    margin-top: 0;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.buttons button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #000;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.buttons button.confirm {
+    background-color: #f4dc5b;
+    color: #000;
+}
+.buttons button.confirm:hover {
+    background-color: #dac345;
+}
+.buttons button:hover {
+    background-color: #f5f6f9;
+}

@@ -1,0 +1,65 @@
+.inputField label{
+    font-size: 0.9rem;
+    color: #595959;
+}
+.inputField input{
+    width: 100%;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #1a2336;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.inputField input:read-only{
+    background-color: #f5f6f9;
+    cursor: not-allowed;
+    color: #6e6e6e;
+}
+.validationMessage{
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+.formActions{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+.formActions button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    color: #252525;
+}
+.resetButton{
+    background-color: #ccc;
+}
+.resetButton:hover{
+    background-color: #a6a6a6;
+    color: #252525;
+}
+.sendButton {
+    background-color: #f4dc5b;
+}
+.sendButton:hover {
+    background-color: #e0c951;
+}
+.sendButton:disabled {
+    background-color: rgba(224, 201, 81, 0.50);
+    color: #6c6c6c;
+    cursor: not-allowed;
+}
+.sendButton:hover:disabled {
+    background-color: rgba(224, 201, 81, 0.60);
+}
+

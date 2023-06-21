@@ -3,15 +3,16 @@ import TablePagination from '../components/table-pagination'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { Product } from '../lib/types'
-import { fetchProducts } from '../lib/api.ts'
+import { fetchProducts } from '../lib/api'
 import { Loader2Icon } from 'lucide-react'
 
-const Productos = () => {
+const ListProducts = () => {
   const navigate = useNavigate()
   const [products, setProducts] = useState<Product[]>([])
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([])
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(true)
+  const [paginationCount, setPaginationCount] = useState(15)
 
   useEffect(() => {
     void fetchProducts().then((data) => {
@@ -20,6 +21,10 @@ const Productos = () => {
       setLoading(false)
     })
   }, [])
+
+  useEffect(() => {
+    setFilteredProducts(products.slice(0, paginationCount))
+  }, [paginationCount])
 
   return (
     <>
@@ -43,7 +48,7 @@ const Productos = () => {
         {!!filteredProducts.length && (
           <>
             <TableProducts products={filteredProducts} setProducts={setFilteredProducts}/>
-            <TablePagination count={filteredProducts.length}/>
+            <TablePagination count={filteredProducts.length} paginationCount={paginationCount} setPaginationCount={setPaginationCount}/>
           </>
         )}
 
@@ -53,7 +58,8 @@ const Productos = () => {
           </div>
         )}
       </div>
+
     </>
   )
 }
-export default Productos
+export default ListProducts

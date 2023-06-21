@@ -173,12 +173,16 @@ table tbody tr td {
 }
 .context-menu {
     position: absolute;
-    top: 2rem;
+    top: 0;
     right: 0;
+    padding-top: 2rem;
+    z-index: 100;
+
+}
+.context-menu > div {
     background-color: #FFFFFF;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 100;
     border: 1px solid #e6e6e6;
 }
 .context-menu__item{
@@ -227,29 +231,19 @@ table tbody tr td {
     background-color: #FFFFFF;
     padding: 20px;
     margin: 0 auto;
-    width: 100%;
     max-width: 600px;
 }
 
-.form-group label{
-    font-size: 0.9rem;
-    color: #595959;
-}
-.form-group input{
-    width: 100%;
-    border: 1px solid #6e6e6e;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: 500;
-    color: #1a2336;
-    padding: 10px;
-    box-sizing: border-box;
-}
+
 .form .form-fields{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px 20px;
-    grid-auto-rows: minmax(0px, 60px);
+    grid-gap: 10px 20px;
+}
+@media (max-width: 600px) {
+    .form .form-fields{
+        grid-template-columns: 1fr;
+    }
 }
 
 .form-header{
@@ -265,11 +259,4 @@ table tbody tr td {
     text-align: center;
     margin:10px;
 }
-.form-actions{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-}
+
